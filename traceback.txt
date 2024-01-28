@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/dorian_question.png') at 0x000000000531fc10>:
-  File "game/script.rpy", line 62, in script
-    "Creo que pretendias ignorarme?"
-OSError: Couldn't find file 'images/dorian_question.png'.
+While loading <renpy.display.im.Image object ('images/alberto_unknown.png') at 0x0000000005075c10>:
+  File "game/script.rpy", line 49, in script
+    unknown "Es tu! Espera!!"
+OSError: Couldn't find file 'images/alberto_unknown.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 62, in script
-    "Creo que pretendias ignorarme?"
+  File "game/script.rpy", line 49, in script
+    unknown "Es tu! Espera!!"
   File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
     Say.execute(self)
   File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
@@ -65,9 +65,9 @@ Full traceback:
     filelike = renpy.loader.load(self.filename, directory="images")
   File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\loader.py", line 672, in load
     raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'images/dorian_question.png'.
+OSError: Couldn't find file 'images/alberto_unknown.png'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.0.24012702
 Doki Doki UCSP 1.0
-Sun Jan 28 02:32:34 2024
+Sun Jan 28 02:40:17 2024

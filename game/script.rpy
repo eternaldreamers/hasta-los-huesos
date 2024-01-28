@@ -4,9 +4,11 @@
 # name of the character.
 
 image bg_entrada = Transform("images/entrada.jpg", xysize=(1920, 1080))
+image bg_escaleras = Transform("images/escaleras.jpg", xysize=(1920, 1080))
 image bg_patio = Transform("images/patio.jpg", xysize=(1920, 1080))
 
 define unknown = Character("unknown")
+image unknown alberto = "images/unknown_alberto.png"
 
 define dorian = Character("Dorian")
 image dorian happy = Transform("images/dorian_happy.png", zoom=0.3)
@@ -42,6 +44,14 @@ label start:
     dorian "Este es mi nuevo inicio"
 
     dorian "Se que podre cumplir todo mis suenios aqui, estoy muy emocioado!!"
+
+    jump desconocido_aparece
+
+
+label desconocido_aparece:
+    scene bg_escaleras
+
+    show unknown alberto
 
     unknown "Es tu! Espera!!"
 
