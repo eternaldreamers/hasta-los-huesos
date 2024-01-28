@@ -3,7 +3,7 @@
 #xalign 0.1 yalign 0.5 xsize 0.8 ysize 0.8
 
 label start:
-
+    play music maya
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -25,6 +25,7 @@ label start:
     dorian "Espero que hoy me vaya todo bien."
 
     jump desconocido_aparece
+    play sound bruh
 
 
 label desconocido_aparece:
@@ -69,6 +70,8 @@ label aceptar_desconocido:
 
     "crashhh...!!"
 
+    play sound boom volume 1.2
+
     show alberto enojado
     alberto "Creo que pretendias ignorarme?"
 
@@ -109,7 +112,7 @@ label aceptar_desconocido:
     alberto "Me conveciste, seamos amigos :3"
     alberto "Eres interesante."
 
-    scene bg_anime_pro
+    scene fachadita
 
     hide alberto
     show dorian pro
