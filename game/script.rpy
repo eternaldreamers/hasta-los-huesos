@@ -3,20 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-image bg_entrada = "images/entrada.jpg"
-image bg_patio = "images/patio.jpg"
+image bg_entrada = Transform("images/entrada.jpg", xysize=(1920, 1080))
+image bg_patio = Transform("images/patio.jpg", xysize=(1920, 1080))
 
 define dorian = Character("Dorian")
-image dorian happy = "images/dorian_happy.png"
+image dorian happy = Transform("images/dorian_happy.png", zoom=0.3)
 
 define alberto = Character("Alberto")
 
 
 # The game starts here.
 
-transform dorian_happy_size:
-    zoom 0.5
-    xalign 0.5
 #xalign 0.1 yalign 0.5 xsize 0.8 ysize 0.8
 
 label start:
@@ -35,7 +32,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show dorian happy at dorian_happy_size with dissolve#
+    show dorian happy
 
     dorian "Waohhh!!! Que bonito dia para estudiar!! :))"
 
