@@ -6,23 +6,42 @@
 image bg_entrada = Transform("images/entrada.jpg", xysize=(1920, 1080))
 image bg_escaleras = Transform("images/escaleras.jpg", xysize=(1920, 1080))
 image bg_patio = Transform("images/patio.jpg", xysize=(1920, 1080))
+image bg_fachadita = Transform("images/fachadita.jpg", xysize=(1920, 1080))
+image bg_pasadiso = Transform("images/pasadiso.jpg", xysize=(1920, 1080))
 
 define unknown = Character("unknown")
-image unknown alberto = "images/unknown_alberto.png"
+image unknown alberto = Transform("images/unknown_alberto.png", zoom=2.5)
 
 define dorian = Character("Dorian")
 image dorian happy = Transform("images/dorian_happy.png", zoom=0.3)
-image dorian question = "images/dorian_question.png"
+image dorian question = Transform("images/dorian_question.png", zoom=2)
+image dorian pro = Transform("images/dorian_pro.png", zoom=2)
+image dorian direccion = Transform("images/dorian_direccion.png", zoom=2)
 
 define alberto = Character("Alberto")
 # image alberto normal = "images/alberto_normal.png"
-image alberto enojado = "images/alberto_enojado.png"
+image alberto enojado = Transform("images/alberto_enojado.png", zoom=2)
+image alberto feliz = Transform("images/alberto_feliz.png", zoom=2)
 
-image alberto caida1 = "images/caida_1.png"
-image alberto caida2 = "images/caida_2.png"
-image alberto caida3 = "images/caida_3.png"
-image alberto caida4 = "images/caida_4.png"
-image alberto caida5 = "images/caida_5.png"
+image alberto caida1 = Transform("images/caida_1.png", zoom=0.5)
+image alberto caida2 = Transform("images/caida_2.png", zoom=0.5)
+image alberto caida3 = Transform("images/caida_3.png", zoom=0.5)
+image alberto caida4 = Transform("images/caida_4.png", zoom=0.5)
+image alberto caida5 = Transform("images/caida_5.png", zoom=0.5)
+
+
+define clari = Character("Clari")
+
+image clari normal = Transform("images/clari_normal.png", zoom=0.5)
+image clari feliz = Transform("images/clari_feliz.png", zoom=0.5)
+
+define maycol = Character("Maycol")
+
+image maycol normal = Transform("images/maycol_normal.png", zoom=2)
+
+define jose = Character("Jose")
+
+image jose normal = Transform("images/jose_normal.png", zoom=2)
 
 # The game starts here.
 
@@ -48,9 +67,7 @@ label start:
 
     dorian "Waohhh!!! Que bonito dia para estudiar!! :))"
 
-    dorian "Este es mi nuevo inicio"
-
-    dorian "Se que podre cumplir todo mis suenios aqui, estoy muy emocioado!!"
+    dorian "Espero que hoy me vaya todo bien."
 
     jump desconocido_aparece
 
@@ -97,10 +114,8 @@ label aceptar_desconocido:
 
     "crashhh...!!"
 
-    "Creo que pretendias ignorarme?"
-
     show alberto enojado
-
+    alberto "Creo que pretendias ignorarme?"
     alberto "Respondeme!!"
 
     show alberto feliz
@@ -108,30 +123,49 @@ label aceptar_desconocido:
     alberto "Es broma, pero si quieres no es broma."
 
     hide alberto
-    show dorian pensando
+    show dorian question
 
-    dorian "*Creo que pretende ser gracioso?, Tal vez pueda seguirle el juego."
+    dorian "*Creo que pretende ser gracioso, Tal vez pueda seguirle el juego. Jajaja xd"
 
     hide dorian
     show alberto feliz
 
-    alberto "Pareces alguien interesante"
+    alberto "Que haces por aqui?, bueno lo que sea.."
     alberto "Seamos amigos :))"
     alberto "Para donde te diriges?"
 
     hide alberto
-    show dorian apuntando_direccion
+    show dorian question
 
-    dorian "Para alla!"
+    dorian "*Porque me lo pide de forma tan repentina?, Creo que me voy a sonrojar"
 
     hide dorian
-    show alberto apuntando_direccion
+    show alberto feliz
 
-    alberto "Para alla?"
+    alberto "Porque te estas comportando "
+    alberto "Seamos amigos :))"
+    alberto "Para donde te diriges?"
 
     hide alberto
-    show dorian apuntando_direccion
+    show dorian direccion
+    dorian "Creo que para... alla!"
 
+    # hide alberto
+    # show dorian apuntando_direccion
+
+    # dorian "Para alla!"
+
+    # hide dorian
+    # show alberto apuntando_direccion
+
+    # alberto "Para alla?"
+
+    hide dorian
+    show alberto feliz
+    alberto "Ahh! vale... Te dirijes hacia el patio"
+
+    hide alberto
+    show dorian happy
     dorian "Sisisis, exactamente par alla xd"
 
     hide dorian
@@ -139,54 +173,42 @@ label aceptar_desconocido:
 
     alberto "Oh vaya, veo que eres inteligente. Elegiste el camino correcto."
 
-    hiden alberto
-    show dorian posicion_pro
+    hide alberto
+    show dorian pro
 
     dorian "Lo se, siempre lo supe!"
 
-    show dorian pensando
+    show dorian question
 
     dorian "Pero... que hay alla? Disimulare que lose... xd"
 
+    # hide dorian
+    # show alberto pensando
+    # alberto "Que extranioo es este tipo, pero bueno..."
+
+    # hide alberto
+
+    # scene patio
     hide dorian
-    show alberto pensando
-    alberto "Que extranioo es este tipo, pero bueno..."
+
+    scene bg_patio
+
+    show alberto feliz 
+    alberto "No conozco este lugar... hacia donde deberia ir?"
+    alberto "Hey que haces aqui?"
 
     hide alberto
+    show maycol normal
+    maycol "Hola Alberto, algo triste..."
+    maycol "Mi servidor de minecraft no me corre :c"
 
-    scene patio
-
-    "Alberto con muchas hambre, decidi en buscar de algo de comer..."
-
-    show alberto pensando 
-    alberto "No conozco este lugar... hacia donde deberia ir?"
-
-    #Aparece un men salvaje cayendose de las escaleras
-    #Quien sera?
-    #Se levanta y dice: "Hola, vi que eres nuevo aqui"
-    #Alberto: Pareces alguien interesantes
-    #Alberto: Seamos amigos :))
-    #Albeto: Para donde te diriges?
-    #Dorian: Para alla!
-    #Alberto: Para alla?
-    #Dorian: Sisisisi, exactamete para alla
-    #alberto: Oh vaya, veo que eres inteligente, elegiste el camino correcto.
-    #Dorian: Siempre lo supe
-    #Dorian: Pero... Que alla>
-    #Dorian: Disumulare que lo se...
-
-    # Dorian se va lentamente a  una direccion desconocida, sin sabes cual sera su destino
-
-    #Alberto: Que extranio ese tipo, pero bueno... 
+    # hide maycol
+    # show alberto feliz
+    # alberto ""
 
 
-    #Alberto con muchas hambre, decidi en buscar de algo de comer...
 
-    #Alberto: No conozco este lugar... hacia donde deberia ir?
 
-    #[Opciones] : Izquierda, Derecha
-
-    #Elegir izquierda
 
     #Maycol: Hey hey hey!! a donde crees que vas?
     #Alberto:  Dejame pasar, tengo muchas hambre!
