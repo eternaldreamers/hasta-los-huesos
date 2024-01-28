@@ -1,76 +1,49 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/clari_emocionadoz.png') at 0x7fc969e6f850>:
-  File "game/script.rpy", line 232, in script
+While running game code:
+  File "game/script.rpy", line 241, in script
     clari "Tengo una idea..."
-OSError: Couldn't find file 'images/clari_emocionadoz.png'.
+OSError: Couldn't find file 'sounds/nokia.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 232, in script
+  File "game/script.rpy", line 241, in script
     clari "Tengo una idea..."
-  File "/usr/share/renpy/renpy/ast.py", line 930, in execute
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
+    Say.execute(self)
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "/usr/share/renpy/renpy/exports.py", line 1474, in say
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\exports.py", line 1493, in say
     who(what, *args, **kwargs)
-  File "/usr/share/renpy/renpy/character.py", line 1352, in __call__
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\character.py", line 1391, in __call__
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/usr/share/renpy/renpy/character.py", line 1003, in do_display
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\character.py", line 1042, in do_display
     display_say(who,
-  File "/usr/share/renpy/renpy/character.py", line 693, in display_say
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\character.py", line 738, in display_say
     rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/usr/share/renpy/renpy/ui.py", line 299, in interact
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/usr/share/renpy/renpy/display/core.py", line 3582, in interact
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/usr/share/renpy/renpy/display/core.py", line 4175, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/usr/share/renpy/renpy/display/core.py", line 2782, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "/usr/share/renpy/renpy/display/image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "/usr/share/renpy/renpy/display/im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "/usr/share/renpy/renpy/display/im.py", line 330, in get
-    surf = image.load()
-  File "/usr/share/renpy/renpy/display/im.py", line 803, in load
-    raise e
-  File "/usr/share/renpy/renpy/display/im.py", line 757, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "/usr/share/renpy/renpy/loader.py", line 833, in load
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 3018, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1205, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1183, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 1125, in periodic_pass
+    c.periodic()
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\alber\Downloads\renpy-8.2.0-sdk\renpy\loader.py", line 672, in load
     raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'images/clari_emocionadoz.png'.
+OSError: Couldn't find file 'sounds/nokia.mp3'.
 
-Linux-6.1.71-1-MANJARO-x86_64-with-glibc2.38 x86_64
-Ren'Py 8.2.0.0+unofficial
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.2.0.24012702
 Doki Doki UCSP 1.0
-Sun Jan 28 12:49:53 2024
+Sun Jan 28 13:14:19 2024

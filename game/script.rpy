@@ -59,6 +59,7 @@ label aceptar_desconocido:
     "piuu..."
 
     show alberto caida2
+    play sound boom volume 2
 
     "pumm..."
 
@@ -69,8 +70,6 @@ label aceptar_desconocido:
     show alberto caida4
 
     "crashhh...!!"
-
-    play sound boom volume 1.2
 
     show alberto enojado
     alberto "Creo que pretendias ignorarme?"
@@ -85,16 +84,26 @@ label aceptar_desconocido:
     dorian "*Creo que pretende ser gracioso, Tal vez pueda seguirle el juego. Jajaja xd"
  
     hide dorian
-    show alberto duda
-
-    alberto "Que haces por aqui?"
-
     show alberto sonroja
     alberto "Quieres ser mi amigo!? Me interesas uwu"
 
-    hide alberto
-    show dorian poker
-    dorian "Dando vueltas, no me ves? :v"
+    menu:
+        "Aceptar amitad"
+
+        "Si": 
+            hide alberto
+            show dorian emocionado
+            dorian "Claro, me encantaria ser tu amigo uwu"
+
+        "No":
+            hide alberto
+            show dorian triste
+            dorian "Uhmmm, no :v"
+
+    hide dorian
+    show alberto duda
+
+    alberto "Y... Que haces por aqui?"
 
     play sound nigga
 
@@ -103,7 +112,7 @@ label aceptar_desconocido:
     dorian "Vengo a la GAME JAM, listo para ganar! :D"
 
     hide dorian
-    show alberto riendo
+    show alberto duda
     alberto "Jajajajajajjaaj, crees que vas a ganar?"
 
     hide alberto
@@ -119,7 +128,7 @@ label aceptar_desconocido:
 
     hide alberto
     show dorian pro
-    dorian "Sisisis, siempre lo se :emoji de pro:"
+    dorian "Sisisis, lo se :emoji de pro:"
 
     scene bg_patio
 
@@ -193,7 +202,7 @@ label aceptar_desconocido:
     hide clari
     show dorian feliz
     dorian "Solo vine porque decia juegos :v"
-
+    play music chinese
     show dorian triste
     dorian "Y yo solo queria jugar y termine aqui"
 
