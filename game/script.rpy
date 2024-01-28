@@ -15,7 +15,14 @@ image dorian happy = Transform("images/dorian_happy.png", zoom=0.3)
 image dorian question = "images/dorian_question.png"
 
 define alberto = Character("Alberto")
+# image alberto normal = "images/alberto_normal.png"
+image alberto enojado = "images/alberto_enojado.png"
 
+image alberto caida1 = "images/caida_1.png"
+image alberto caida2 = "images/caida_2.png"
+image alberto caida3 = "images/caida_3.png"
+image alberto caida4 = "images/caida_4.png"
+image alberto caida5 = "images/caida_5.png"
 
 # The game starts here.
 
@@ -53,23 +60,46 @@ label desconocido_aparece:
 
     show unknown alberto
 
-    unknown "Es tu! Espera!!"
+    unknown "Hey tu! Espera!!"
 
     menu:
         "Que decision vas a tomar?"
 
         "Ignorar":
-            dorian "Alguien me esta hablando?, debio ser mosca!"
+            hide unknown
             show dorian question
+            dorian "Alguien me esta hablando?, debio ser mosca!"
             jump aceptar_desconocido
 
         "Aceptar":
-            dorian "Creo que escucho a alguien!"
+            hide unknown
             show dorian question
+            dorian "Creo que escucho a alguien!"
             jump aceptar_desconocido
 
 label aceptar_desconocido: 
+
+    hide dorian
+
+    show alberto caida1
+
+    "piuu..."
+
+    show alberto caida2
+
+    "pumm..."
+
+    show alberto caida3
+
+    "pammm..."
+
+    show alberto caida4
+
+    "crashhh...!!"
+
     "Creo que pretendias ignorarme?"
+
+    show alberto enojado
 
     alberto "Respondeme!!"
 
