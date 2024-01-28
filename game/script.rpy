@@ -75,8 +75,8 @@ label aceptar_desconocido:
     show alberto enojado
     alberto "Creo que pretendias ignorarme?"
 
+    play music funfun
     show alberto feliz
-
     alberto "Es broma, pero si quieres no es broma."
 
     hide alberto
@@ -96,7 +96,10 @@ label aceptar_desconocido:
     show dorian poker
     dorian "Dando vueltas, no me ves? :v"
 
+    play sound nigga
+
     show dorian emocionado
+    play music spongebob
     dorian "Vengo a la GAME JAM, listo para ganar! :D"
 
     hide dorian
@@ -139,6 +142,7 @@ label aceptar_desconocido:
     alberto "En que eres bueno?"
 
     hide alberto
+    play music trombon
     show dorian feliz
     dorian "*Porque me pregunta eso? Quiere descartarme antes de tiempo?"
     
@@ -163,6 +167,7 @@ label aceptar_desconocido:
     "Camino al patio..."
 
     hide alberto
+    play music spongebob
     show clari enojada
     clari "Donde estabas? >:v"
 
@@ -204,6 +209,7 @@ label aceptar_desconocido:
     alberto "Y eso es mas que suficiente xdddddddddd"
 
     hide alberto
+    play music deadline
     show clari pensando
     clari "Entonces... que vamos a hacer para crear el juego?"
     clari "Solo nos quedan 3 horas..."
@@ -231,6 +237,7 @@ label aceptar_desconocido:
     clari "No quiero!! No quierooooooooooooo!!!"
 
     show clari emocionado
+    play music nokia
     clari "Tengo una idea..."
     clari "Y si mejor nos ponemos a videojuegar? xddddd"
 
@@ -239,6 +246,7 @@ label aceptar_desconocido:
     dorian "Sisis vamos a jugar minecraft"
 
     hide dorian
+    play sound nigga
     show alberto feliz
     alberto "Acepto! :D"
 
