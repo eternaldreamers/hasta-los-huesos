@@ -103,6 +103,63 @@ label aceptar_desconocido:
 
     alberto "Respondeme!!"
 
+    show alberto feliz
+
+    alberto "Es broma, pero si quieres no es broma."
+
+    hide alberto
+    show dorian pensando
+
+    dorian "*Creo que pretende ser gracioso?, Tal vez pueda seguirle el juego."
+
+    hide dorian
+    show alberto feliz
+
+    alberto "Pareces alguien interesante"
+    alberto "Seamos amigos :))"
+    alberto "Para donde te diriges?"
+
+    hide alberto
+    show dorian apuntando_direccion
+
+    dorian "Para alla!"
+
+    hide dorian
+    show alberto apuntando_direccion
+
+    alberto "Para alla?"
+
+    hide alberto
+    show dorian apuntando_direccion
+
+    dorian "Sisisis, exactamente par alla xd"
+
+    hide dorian
+    show alberto feliz
+
+    alberto "Oh vaya, veo que eres inteligente. Elegiste el camino correcto."
+
+    hiden alberto
+    show dorian posicion_pro
+
+    dorian "Lo se, siempre lo supe!"
+
+    show dorian pensando
+
+    dorian "Pero... que hay alla? Disimulare que lose... xd"
+
+    hide dorian
+    show alberto pensando
+    alberto "Que extranioo es este tipo, pero bueno..."
+
+    hide alberto
+
+    scene patio
+
+    "Alberto con muchas hambre, decidi en buscar de algo de comer..."
+
+    show alberto pensando 
+    alberto "No conozco este lugar... hacia donde deberia ir?"
 
     #Aparece un men salvaje cayendose de las escaleras
     #Quien sera?
