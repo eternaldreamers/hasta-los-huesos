@@ -1,58 +1,9 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-image bg_entrada = Transform("images/entrada.jpg", xysize=(1920, 1080))
-image bg_escaleras = Transform("images/escaleras.jpg", xysize=(1920, 1080))
-image bg_patio = Transform("images/patio.jpg", xysize=(1920, 1080))
-image bg_fachadita = Transform("images/fachadita.jpg", xysize=(1920, 1080))
-image bg_pasadiso = Transform("images/pasadiso.jpg", xysize=(1920, 1080))
-
-define unknown = Character("unknown")
-image unknown alberto = Transform("images/unknown_alberto.png", zoom=2.5)
-
-define dorian = Character("Dorian")
-image dorian happy = Transform("images/dorian_happy.png", zoom=0.3)
-image dorian question = Transform("images/dorian_question.png", zoom=2)
-image dorian pro = Transform("images/dorian_pro.png", zoom=2)
-image dorian direccion = Transform("images/dorian_direccion.png", zoom=2)
-
-define alberto = Character("Alberto")
-# image alberto normal = "images/alberto_normal.png"
-image alberto enojado = Transform("images/alberto_enojado.png", zoom=2)
-image alberto feliz = Transform("images/alberto_feliz.png", zoom=2)
-
-image alberto caida1 = Transform("images/caida_1.png", zoom=0.5)
-image alberto caida2 = Transform("images/caida_2.png", zoom=0.5)
-image alberto caida3 = Transform("images/caida_3.png", zoom=0.5)
-image alberto caida4 = Transform("images/caida_4.png", zoom=0.5)
-image alberto caida5 = Transform("images/caida_5.png", zoom=0.5)
-
-
-define clari = Character("Clari")
-
-image clari normal = Transform("images/clari_normal.png", zoom=0.5)
-image clari feliz = Transform("images/clari_feliz.png", zoom=0.5)
-
-define maycol = Character("Maycol")
-
-image maycol normal = Transform("images/maycol_normal.png", zoom=2)
-
-define jose = Character("Jose")
-
-image jose normal = Transform("images/jose_normal.png", zoom=2)
-
-# The game starts here.
-
-#xalign 0.1 yalign 0.5 xsize 0.8 ysize 0.8
-
-label start:
+﻿label start:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
+    play music maya
     scene bg_entrada
 
     "Era una tarda muy tranquila en la universidad."
@@ -68,7 +19,7 @@ label start:
     dorian "Waohhh!!! Que bonito dia para estudiar!! :))"
 
     dorian "Espero que hoy me vaya todo bien."
-
+    play sound bruh
     jump desconocido_aparece
 
 

@@ -1,0 +1,6 @@
+define clari = Character("Clari")
+define maycol = Character("Maycol")
+define jose = Character("Jose")
+define alberto = Character("Alberto")
+define unknown = Character("unknown")
+define dorian = Character("Dorian")

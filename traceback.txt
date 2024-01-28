@@ -1,73 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/alberto_unknown.png') at 0x0000000005075c10>:
-  File "game/script.rpy", line 49, in script
-    unknown "Es tu! Espera!!"
-OSError: Couldn't find file 'images/alberto_unknown.png'.
+While running game code:
+  File "game/script.rpy", line 22, in script
+    play sound bruh
+  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 22, in <module>
+    play sound bruh
+NameError: name 'bruh' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 49, in script
-    unknown "Es tu! Espera!!"
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\exports.py", line 1493, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\character.py", line 1391, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\character.py", line 1042, in do_display
-    display_say(who,
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\character.py", line 738, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 2814, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\core.py", line 1352, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\transform.py", line 957, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 978, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 413, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\im.py", line 626, in render
-    return cache.get(self, render=True)
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\im.py", line 309, in get
-    surf = image.load()
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\im.py", line 761, in load
-    raise e
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\display\im.py", line 711, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "C:\Users\dev\Downloads\renpy-8.2.0-sdk\renpy\loader.py", line 672, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'images/alberto_unknown.png'.
+  File "game/script.rpy", line 22, in script
+    play sound bruh
+  File "/usr/share/renpy/renpy/ast.py", line 2259, in execute
+    self.call("execute")
+  File "/usr/share/renpy/renpy/ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/usr/share/renpy/renpy/statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "/usr/share/renpy/renpy/python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/usr/share/renpy/renpy/python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 22, in <module>
+    play sound bruh
+NameError: name 'bruh' is not defined
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.2.0.24012702
+Linux-6.1.71-1-MANJARO-x86_64-with-glibc2.38 x86_64
+Ren'Py 8.2.0.0+unofficial
 Doki Doki UCSP 1.0
-Sun Jan 28 02:40:17 2024
+Sun Jan 28 11:08:07 2024
